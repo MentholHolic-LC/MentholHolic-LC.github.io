@@ -10,10 +10,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /notes/:title.html
 future: false
-plugins:
-  - jekyll-feed
-feed:
-  path: feed.xml
 defaults:
   - scope:
       path: ""

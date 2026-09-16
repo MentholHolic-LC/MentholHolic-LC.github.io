@@ -24,7 +24,7 @@
 
 根目录 `index.html`、`archives.html`、`about.html`、`notes/*.html`、`feed.xml` 是本次生成的**离线预览快照**，可直接双击首页查看。它们在 `_config.yml` 中排除，不参与线上构建；线上始终从 Markdown 与模板重新生成。添加新 Markdown 后，线上自动更新，离线快照不会自动更新。
 
-本次快照使用 LiquidJS + Markdown-it 渲染同一套模板，仅用于预览，不代替 Jekyll 正式构建。辅助脚本在仓库外 `D:\PrivateWebsite\.blog-preview\render.cjs`。本机无 Ruby，尚未本地执行 Jekyll；正式工作流使用 GitHub 官方 Jekyll Pages action。
+本次快照使用 LiquidJS + Markdown-it 渲染同一套模板，仅用于预览，不代替 Jekyll 正式构建。辅助脚本在仓库外 `D:\PrivateWebsite\.blog-preview\render.cjs`。本机无 Ruby；正式 Jekyll 构建及 GitHub Pages 部署已在 GitHub Actions 验证通过。
 
 安装 Ruby / Bundler 后可本地查看实时文章：
 
@@ -55,3 +55,6 @@ bundle exec jekyll serve
 - BorderGlow 基于用户提供的 React Bits 代码，保留边缘接近度和指针角度计算，改写为原生事件、CSS 渐变边框与外部辉光；不引入 React。
 - 全站共用一个 canvas。右下角按钮控制极光，暂停偏好跨页保留；后台标签自动暂停；无 WebGL2 时退回静态渐变。滚动不再暂停极光，因为背景现在固定覆盖整个视口。
 - 自我介绍围绕分析、拆解、理解原理和记录探索展开。
+
+
+线上地址：https://mentholholic-lc.github.io/ 。RSS 由 `rss-feed.xml` 的 Jekyll 模板输出为 `/feed.xml`，与本地预览快照分开，避免快照文件阻止自动生成。

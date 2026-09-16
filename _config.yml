@@ -1,4 +1,46 @@
-title: MentholHolic-LC
-description: My personal blog
-
-theme: minima
+title: MentholHolic
+subtitle: 薄荷与比特
+description: "一个喜欢分析与拆解的人的数字自留地。记录探索过程、技术折腾，以及生活中的一点热爱。"
+url: "https://mentholholic-lc.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+permalink: /notes/:title.html
+future: false
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: MentholHolic
+exclude:
+  - README.md
+  - WRITING.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .npm-cache
+  - dist
+  - vendor
+  - index.html
+  - archives.html
+  - about.html
+  - notes
+  - tools
+  - preview-site
+  - assets/styles.css
+  - assets/main.js
+  - assets/content.js
+  - feed.xml

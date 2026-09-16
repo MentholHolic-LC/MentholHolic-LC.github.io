@@ -1,0 +1,8 @@
+---
+layout: default
+title: 文章归档
+nav: archives
+permalink: /archives.html
+---
+<section class="page-intro shell"><div class="eyebrow">THE ARCHIVE</div><h1>写过的，都在这里<span>。</span></h1><p>一篇一篇，给探索留下坐标。共 {{ site.posts | size }} 篇记录。</p></section>
+<section class="archive shell"><label class="search archive-search"><span>⌕</span><input type="search" placeholder="搜索标题、标签或摘要…" aria-label="搜索文章"></label><div class="post-list">{% for post in site.posts %}<article class="archive-row post-card" data-search="{{ post.title | escape }} {{ post.tags | join: ' ' | escape }} {{ post.description | escape }}"><time>{{ post.date | date: '%Y.%m.%d' }}</time><div><span class="eyebrow">{{ post.categories | first }}</span><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><div class="tags">{% for tag in post.tags %}<span># {{ tag }}</span>{% endfor %}</div></div><a class="archive-arrow" aria-label="阅读 {{ post.title | escape }}" href="{{ post.url | relative_url }}">↗</a></article>{% endfor %}</div><p class="empty-state search-empty" hidden>没有找到相关笔记，试试其他关键词。</p></section>

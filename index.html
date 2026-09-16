@@ -1,5 +1,413 @@
----
-layout: home
----
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1112" />
+    <title>MentholHolic</title>
+    <meta
+      name="description"
+      content="一个喜欢分析与拆解的人的数字自留地。记录探索过程、技术折腾，以及生活中的一点热爱。"
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/blog.css" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="MentholHolic"
+      href="./feed.xml"
+    />
+    <script defer src="./assets/blog.js"></script>
+    <link rel="stylesheet" href="./assets/hero.css" />
+    <link rel="stylesheet" href="./assets/theme.css" />
+    <script defer src="./assets/aurora.js"></script>
+    <script defer src="./assets/theme.js"></script>
+  </head>
+  <body class="home-page">
+    <div class="site-backdrop" aria-hidden="true">
+      <div class="theme-portrait">
+        <img
+          src="./assets/images/miku-reference.png"
+          alt=""
+          width="716"
+          height="1200"
+        />
+      </div>
+      <div class="aurora-container">
+        <canvas class="aurora-canvas"></canvas>
+      </div>
+      <div class="theme-shade"></div>
+      <div class="theme-texture"></div>
+    </div>
+    <button
+      class="aurora-toggle theme-motion"
+      type="button"
+      aria-pressed="false"
+      aria-label="暂停极光动画"
+    >
+      Ⅱ <span>AURORA ON</span>
+    </button>
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="header shell">
+      <a class="brand" href="./index.html" aria-label="MENTHOLHOLIC 首页"
+        ><svg
+          class="brand-emblem"
+          viewBox="0 0 42 36"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M2 31 11 4 21 21 31 4 40 31M1 34h40"
+            stroke="currentColor"
+            stroke-width="2"
+          /></svg
+        ><span class="brand-word"
+          >MENTHOL<span>HOLIC</span><sup>®</sup></span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a aria-current="page" href="./index.html">首页</a
+        ><a href="./archives.html">文章归档</a><a href="./about.html">关于我</a
+        ><a
+          href="https://github.com/MentholHolic-LC"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub ↗</a
+        >
+      </nav>
+      <a class="rss-link" href="./feed.xml" title="订阅 RSS"
+        >◉ <span>RSS</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="editorial-hero" aria-labelledby="hero-title">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-stage">
+          <div class="hero-kicker">
+            <span><i></i> PERSONAL BLOG / EST. 2026</span
+            ><span>ANALYZE · EXPLORE · LIFE</span>
+          </div>
+          <h1 id="hero-title">MENTHOL<span class="hero-title-dot">®</span></h1>
+          <div class="hero-subline">
+            <span>好奇心，是我的默认设置。</span
+            ><span>THE MIND WANDERS. THE NOTES REMAIN.</span>
+          </div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span>39</span><i>✳</i>
+          </div>
+          <div class="hero-note">
+            <span class="hero-note-label">HELLO, I'M MENTHOLHOLIC</span>
+            <h2>写下技术，<br />也写下<span>自己。</span></h2>
+            <p>
+              拆解事物、追问原理，和偶尔跑偏的日常。<br />这里是我的数字自留地，欢迎随意翻阅。
+            </p>
+            <div class="hero-cta-row">
+              <a class="hero-cta" href="#journal">翻开我的笔记 <span>↗</span></a
+              ><a class="hero-about" href="./about.html"
+                >认识我 <span>↗</span></a
+              >
+            </div>
+          </div>
+          <div class="hero-manifesto">
+            <span aria-hidden="true">↗</span>
+            <p>STAY CURIOUS.<br />STAY <em>YOURSELF.</em></p>
+            <small>一半理性，一半浪漫。</small>
+          </div>
+          <div class="hero-bottom-line">
+            <a href="#journal"
+              ><span class="scroll-mark">↓</span> SCROLL TO READ</a
+            ><span class="hero-coordinate">独立思考 / 自由记录 / 保持热爱</span
+            ><span class="hero-read-count">3 NOTES & COUNTING</span>
+          </div>
+        </div>
+      </section>
+      <div class="frequency-strip" aria-hidden="true">
+        <span>ANALYSIS & CURIOSITY</span><b>✳</b
+        ><span>NOTES FROM MY LITTLE WORLD</span><b>✳</b
+        ><span>コードと、日常と。</span><b>✳</b><span>TUNED TO 39Hz</span>
+      </div>
+      <section class="explore-section shell" aria-labelledby="explore-heading">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CHOOSE YOUR NEXT CHAPTER</span>
+            <h2 id="explore-heading">随意逛逛<span> / EXPLORE</span></h2>
+          </div>
+          <span class="explore-hint">跟着好奇心，选一个入口 ↙</span>
+        </div>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="#journal"
+            ><span class="chapter-top"
+              ><span>01 / READ</span><span>笔记本 ↗</span></span
+            >
+            <h3>把想法，<br />写成记录<span>。</span></h3>
+            <div class="chapter-shape shape-orbit" aria-hidden="true">
+              <i></i><i></i><b>✳</b>
+            </div>
+            <div class="chapter-pills">
+              <span>拆开问题</span><span>理解原理</span
+              ><span>记下新发现 ↗</span>
+            </div>
+            <span class="chapter-bottom">阅读最新文章 <b>↗</b></span></a
+          >
+          <a class="chapter-card" href="./archives.html"
+            ><span class="chapter-top"
+              ><span>02 / ARCHIVE</span><span>时间线 ↗</span></span
+            >
+            <h3>让探索，<br />留下坐标<span>。</span></h3>
+            <div class="chapter-shape shape-stack" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+            <div class="chapter-pills">
+              <span>技术与折腾</span><span>零散与系统</span
+              ><span>沿着时间回看 ↗</span>
+            </div>
+            <span class="chapter-bottom">查看文章归档 <b>↗</b></span></a
+          >
+          <a class="chapter-card" href="./about.html"
+            ><span class="chapter-top"
+              ><span>03 / ABOUT</span><span>关于我 ↗</span></span
+            >
+            <h3>保持好奇，<br />也保持自我<span>。</span></h3>
+            <div class="chapter-shape shape-flower" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="chapter-pills">
+              <span>喜欢分析拆解</span><span>也热爱日常</span
+              ><span>认识屏幕后的我 ↗</span>
+            </div>
+            <span class="chapter-bottom">了解更多关于我 <b>↗</b></span></a
+          >
+        </div>
+      </section>
+      <div class="blog-grid shell" id="journal">
+        <section class="journal" aria-labelledby="journal-heading">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">THE JOURNAL</span>
+              <h2 id="journal-heading">最近写的<span> / 3</span></h2>
+            </div>
+            <a href="./archives.html">全部文章 ↗</a>
+          </div>
+          <div class="filter-bar">
+            <div class="filter-buttons" aria-label="文章分类">
+              <button class="active" data-category="all" aria-pressed="true">
+                全部</button
+              ><button data-category="随笔" aria-pressed="false">随笔</button
+              ><button data-category="建站记录" aria-pressed="false">
+                建站记录</button
+              ><button data-category="安全笔记" aria-pressed="false">
+                安全笔记
+              </button>
+            </div>
+            <label class="search"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                type="search"
+                placeholder="搜索笔记…"
+                aria-label="搜索文章"
+              /><kbd>/</kbd></label
+            >
+          </div>
+          <div class="post-list">
+            <article
+              class="post-card featured"
+              data-category="随笔"
+              data-search="你好，这里是我的数字自留地 Hello World 日常 给零散的想法一个落脚点。关于安全、关于折腾，也关于那些值得记下的小事。"
+            >
+              <div class="feature-art" aria-hidden="true">
+                <div class="window-bar">
+                  <i></i><i></i><i></i><span>~/menthol/notes</span
+                  ><span>UTF-8</span>
+                </div>
+                <div class="terminal-art">
+                  <div>
+                    <span class="prompt">❯</span> cat hello-world.md
+                    <p># 从这里，开始记录。</p>
+                    <small
+                      >security &nbsp; · &nbsp; curiosity &nbsp; · &nbsp;
+                      life</small
+                    >
+                  </div>
+                  <span class="terminal-mark">{ <b>m</b> }</span>
+                </div>
+                <div class="art-foot">
+                  A DIGITAL GARDEN, ALWAYS GROWING.<span>✳</span>
+                </div>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span>随笔</span><time datetime="2026-09-16">2026.09.16</time
+                  ><span class="new-label">NEW</span>
+                </div>
+                <h3>
+                  <a href="./notes/hello-world.html"
+                    >你好，这里是我的数字自留地</a
+                  >
+                </h3>
+                <p>
+                  给零散的想法一个落脚点。关于安全、关于折腾，也关于那些值得记下的小事。
+                </p>
+                <div class="post-bottom">
+                  <div class="tags">
+                    <span># Hello World</span><span># 日常</span>
+                  </div>
+                  <a
+                    class="read-link"
+                    href="./notes/hello-world.html"
+                    aria-label="阅读 你好，这里是我的数字自留地"
+                    >阅读全文 <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
 
-<h1>开发测试</h1>
+            <article
+              class="post-card"
+              data-category="建站记录"
+              data-search="把 Markdown 变成博客：我的写作流程 Jekyll Markdown 不用手写网页。一个 Markdown 文件，加上几行文章信息，就能让新的记录出现在这里。"
+            >
+              <div class="post-content">
+                <div class="post-meta">
+                  <span>建站记录</span
+                  ><time datetime="2026-09-15">2026.09.15</time>
+                </div>
+                <h3>
+                  <a href="./notes/writing-with-markdown.html"
+                    >把 Markdown 变成博客：我的写作流程</a
+                  >
+                </h3>
+                <p>
+                  不用手写网页。一个 Markdown
+                  文件，加上几行文章信息，就能让新的记录出现在这里。
+                </p>
+                <div class="post-bottom">
+                  <div class="tags">
+                    <span># Jekyll</span><span># Markdown</span>
+                  </div>
+                  <a
+                    class="read-link"
+                    href="./notes/writing-with-markdown.html"
+                    aria-label="阅读 把 Markdown 变成博客：我的写作流程"
+                    >阅读全文 <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="post-card"
+              data-category="安全笔记"
+              data-search="一份可复用的安全学习笔记模板 学习记录 方法论 不只记下“怎么做”，也记录“为什么”。用一份小模板，把一次探索整理成可回看的知识。"
+            >
+              <div class="post-content">
+                <div class="post-meta">
+                  <span>安全笔记</span
+                  ><time datetime="2026-09-14">2026.09.14</time>
+                </div>
+                <h3>
+                  <a href="./notes/security-notebook.html"
+                    >一份可复用的安全学习笔记模板</a
+                  >
+                </h3>
+                <p>
+                  不只记下“怎么做”，也记录“为什么”。用一份小模板，把一次探索整理成可回看的知识。
+                </p>
+                <div class="post-bottom">
+                  <div class="tags">
+                    <span># 学习记录</span><span># 方法论</span>
+                  </div>
+                  <a
+                    class="read-link"
+                    href="./notes/security-notebook.html"
+                    aria-label="阅读 一份可复用的安全学习笔记模板"
+                    >阅读全文 <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state search-empty" hidden>
+            没有找到相关笔记。换个关键词，或选择「全部」试试。
+          </p>
+          <div class="journal-end">
+            <span>— 写到这里，刚刚好 —</span
+            ><a href="./archives.html">去归档里逛逛 →</a>
+          </div>
+        </section>
+        <aside class="sidebar">
+          <section class="profile-card">
+            <div class="profile-top">
+              <span class="mini-avatar">m<span>_</span></span>
+              <div>
+                <h2>MentholHolic</h2>
+                <span><i class="status-dot"></i> 好奇心在线</span>
+              </div>
+              <span class="profile-spark">✳</span>
+            </div>
+            <p>
+              喜欢分析，也热衷拆解。<br />从现象追到原理，把复杂的事一点点理清，再把探索与日常记下来。
+            </p>
+            <div class="profile-stats">
+              <a href="./archives.html"
+                ><strong>3</strong><span>篇记录</span></a
+              >
+              <div><strong>3</strong><span>个分类</span></div>
+              <div><strong>∞</strong><span>好奇心</span></div>
+            </div>
+            <a class="about-link" href="./about.html"
+              >更多关于我 <span>↗</span></a
+            >
+          </section>
+          <figure class="miku-card">
+            <div class="image-heading">
+              <span>IN MY OWN FREQUENCY</span><span>01 / 39</span>
+            </div>
+            <img
+              src="./assets/images/miku-reference.png"
+              alt="初音未来举起透明唱片盒的插画，青绿色双马尾与唱片折射形成层叠画面。原图保留画师署名。"
+              width="716"
+              height="1200"
+              loading="lazy"
+            />
+            <figcaption>
+              <div>
+                <span>A LITTLE MIKU, A LOT OF JOY.</span
+                ><strong>世界很吵，听自己的频率。</strong>
+              </div>
+              <span class="music-note">♫</span>
+            </figcaption>
+          </figure>
+          <section class="now-card">
+            <div class="eyebrow">
+              <span class="status-dot"></span> NOW / 最近状态
+            </div>
+            <p>把零散的想法，<br />整理成值得留下的文字。</p>
+            <span class="now-note">慢慢更新，不赶进度。<span>↳</span></span>
+          </section>
+          <section class="tag-card">
+            <h3>探索关键词 <span>⌗</span></h3>
+            <div class="tag-cloud">
+              <button data-tag="Hello World">
+                Hello World <small>1</small></button
+              ><button data-tag="日常">日常 <small>1</small></button
+              ><button data-tag="Jekyll">Jekyll <small>1</small></button
+              ><button data-tag="Markdown">Markdown <small>1</small></button
+              ><button data-tag="学习记录">学习记录 <small>1</small></button
+              ><button data-tag="方法论">方法论 <small>1</small></button>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer shell">
+      <div>
+        <a href="./index.html">MentholHolic<span>_</span></a>
+        <p>保持好奇。慢慢记录。</p>
+      </div>
+      <div class="footer-note">
+        © 2026 MentholHolic<br />BUILT WITH JEKYLL · TUNED TO 39Hz
+      </div>
+      <a class="back-top" href="#">回到顶部 ↑</a>
+    </footer>
+  </body>
+</html>

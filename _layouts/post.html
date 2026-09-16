@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="reading-layout shell">
+  <article class="reading-card">
+    <a class="back-link" href="{{ '/index.html' | relative_url }}">← 回到笔记本</a>
+    <header class="article-header"><div class="post-meta"><span>{{ page.categories | first | default: '随笔' }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y.%m.%d' }}</time><span>{{ page.author | default: 'MentholHolic' }}</span></div><h1>{{ page.title | escape }}</h1><p>{{ page.description }}</p><div class="tags">{% for tag in page.tags %}<span># {{ tag }}</span>{% endfor %}</div></header>
+    <div class="prose">{{ content }}</div>
+    <div class="article-end"><span>谢谢你读到这里。</span><a href="{{ '/archives.html' | relative_url }}">继续阅读其他笔记 ↗</a></div>
+  </article>
+  <aside class="reading-aside"><div class="eyebrow">ON THIS PAGE</div><h2>这篇笔记里</h2><nav class="toc" aria-label="文章目录"></nav><p>记录，是另一种理解。</p><a href="#">↑ 回到顶部</a></aside>
+</div>

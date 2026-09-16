@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1112" />
+    <title>文章归档 · MentholHolic</title>
+    <meta
+      name="description"
+      content="一个喜欢分析与拆解的人的数字自留地。记录探索过程、技术折腾，以及生活中的一点热爱。"
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/blog.css" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="MentholHolic"
+      href="./feed.xml"
+    />
+    <script defer src="./assets/blog.js"></script>
+    <link rel="stylesheet" href="./assets/hero.css" />
+    <link rel="stylesheet" href="./assets/theme.css" />
+    <script defer src="./assets/aurora.js"></script>
+    <script defer src="./assets/theme.js"></script>
+  </head>
+  <body>
+    <div class="site-backdrop" aria-hidden="true">
+      <div class="theme-portrait">
+        <img
+          src="./assets/images/miku-reference.png"
+          alt=""
+          width="716"
+          height="1200"
+        />
+      </div>
+      <div class="aurora-container">
+        <canvas class="aurora-canvas"></canvas>
+      </div>
+      <div class="theme-shade"></div>
+      <div class="theme-texture"></div>
+    </div>
+    <button
+      class="aurora-toggle theme-motion"
+      type="button"
+      aria-pressed="false"
+      aria-label="暂停极光动画"
+    >
+      Ⅱ <span>AURORA ON</span>
+    </button>
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="header shell">
+      <a class="brand" href="./index.html" aria-label="MENTHOLHOLIC 首页"
+        ><svg
+          class="brand-emblem"
+          viewBox="0 0 42 36"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M2 31 11 4 21 21 31 4 40 31M1 34h40"
+            stroke="currentColor"
+            stroke-width="2"
+          /></svg
+        ><span class="brand-word"
+          >MENTHOL<span>HOLIC</span><sup>®</sup></span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="./index.html">首页</a
+        ><a aria-current="page" href="./archives.html">文章归档</a
+        ><a href="./about.html">关于我</a
+        ><a
+          href="https://github.com/MentholHolic-LC"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub ↗</a
+        >
+      </nav>
+      <a class="rss-link" href="./feed.xml" title="订阅 RSS"
+        >◉ <span>RSS</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="page-intro shell">
+        <div class="eyebrow">THE ARCHIVE</div>
+        <h1>写过的，都在这里<span>。</span></h1>
+        <p>一篇一篇，给探索留下坐标。共 3 篇记录。</p>
+      </section>
+      <section class="archive shell">
+        <label class="search archive-search"
+          ><span>⌕</span
+          ><input
+            type="search"
+            placeholder="搜索标题、标签或摘要…"
+            aria-label="搜索文章"
+        /></label>
+        <div class="post-list">
+          <article
+            class="archive-row post-card"
+            data-search="你好，这里是我的数字自留地 Hello World 日常 给零散的想法一个落脚点。关于安全、关于折腾，也关于那些值得记下的小事。"
+          >
+            <time>2026.09.16</time>
+            <div>
+              <span class="eyebrow">随笔</span>
+              <h2>
+                <a href="./notes/hello-world.html"
+                  >你好，这里是我的数字自留地</a
+                >
+              </h2>
+              <div class="tags">
+                <span># Hello World</span><span># 日常</span>
+              </div>
+            </div>
+            <a
+              class="archive-arrow"
+              aria-label="阅读 你好，这里是我的数字自留地"
+              href="./notes/hello-world.html"
+              >↗</a
+            >
+          </article>
+          <article
+            class="archive-row post-card"
+            data-search="把 Markdown 变成博客：我的写作流程 Jekyll Markdown 不用手写网页。一个 Markdown 文件，加上几行文章信息，就能让新的记录出现在这里。"
+          >
+            <time>2026.09.15</time>
+            <div>
+              <span class="eyebrow">建站记录</span>
+              <h2>
+                <a href="./notes/writing-with-markdown.html"
+                  >把 Markdown 变成博客：我的写作流程</a
+                >
+              </h2>
+              <div class="tags">
+                <span># Jekyll</span><span># Markdown</span>
+              </div>
+            </div>
+            <a
+              class="archive-arrow"
+              aria-label="阅读 把 Markdown 变成博客：我的写作流程"
+              href="./notes/writing-with-markdown.html"
+              >↗</a
+            >
+          </article>
+          <article
+            class="archive-row post-card"
+            data-search="一份可复用的安全学习笔记模板 学习记录 方法论 不只记下“怎么做”，也记录“为什么”。用一份小模板，把一次探索整理成可回看的知识。"
+          >
+            <time>2026.09.14</time>
+            <div>
+              <span class="eyebrow">安全笔记</span>
+              <h2>
+                <a href="./notes/security-notebook.html"
+                  >一份可复用的安全学习笔记模板</a
+                >
+              </h2>
+              <div class="tags">
+                <span># 学习记录</span><span># 方法论</span>
+              </div>
+            </div>
+            <a
+              class="archive-arrow"
+              aria-label="阅读 一份可复用的安全学习笔记模板"
+              href="./notes/security-notebook.html"
+              >↗</a
+            >
+          </article>
+        </div>
+        <p class="empty-state search-empty" hidden>
+          没有找到相关笔记，试试其他关键词。
+        </p>
+      </section>
+    </main>
+    <footer class="footer shell">
+      <div>
+        <a href="./index.html">MentholHolic<span>_</span></a>
+        <p>保持好奇。慢慢记录。</p>
+      </div>
+      <div class="footer-note">
+        © 2026 MentholHolic<br />BUILT WITH JEKYLL · TUNED TO 39Hz
+      </div>
+      <a class="back-top" href="#">回到顶部 ↑</a>
+    </footer>
+  </body>
+</html>
